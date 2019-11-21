@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mainContentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/dimBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/slidingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:cardBackgroundColor="?colorSecondary"
+        app:cardUseCompatPadding="false"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:strokeWidth="0dp">
+
+
+        <FrameLayout
+            android:id="@+id/playerFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:id="@+id/miniPlayerFragment"
+            android:name="com.maxfour.music.fragments.MiniPlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            tools:layout="@layout/fragment_mini_player" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.maxfour.music.views.BottomNavigationBarTinted
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?colorSecondary"
+        android:elevation="0dp"
+        android:visibility="gone"
+        app:itemIconTint="@drawable/bottom_navigation_item_colors"
+        app:itemTextAppearanceActive="@style/BottomSheetItemTextAppearanceActive"
+        app:itemTextAppearanceInactive="@style/BottomSheetItemTextAppearanceInactive"
+        app:itemTextColor="@drawable/bottom_navigation_item_colors"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_main"
+        tools:layout_height="56dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

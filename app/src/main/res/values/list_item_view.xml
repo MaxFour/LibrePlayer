@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="ListItemView">
+        <attr name="listItemIcon" format="reference" />
+        <attr name="listItemTitle" format="string" />
+        <attr name="listItemSummary" format="string" />
+    </declare-styleable>
+</resources>

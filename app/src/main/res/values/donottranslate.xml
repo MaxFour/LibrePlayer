@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="git_hub" translatable="false">GitHub</string>
+
+    <string name="app_shortcut_last_added_long" translatable="false">@string/last_added</string>
+    <string name="app_shortcut_last_added_short" translatable="false">@string/last_added</string>
+    <string name="app_shortcut_shuffle_all_long" translatable="false">@string/action_shuffle_all</string>
+    <string name="app_shortcut_top_tracks_long" translatable="false">@string/my_top_songs</string>
+
+    <string name="grid_size_1" translatable="false">1</string>
+    <string name="grid_size_2" translatable="false">2</string>
+    <string name="grid_size_3" translatable="false">3</string>
+    <string name="grid_size_4" translatable="false">4</string>
+    <string name="grid_size_5" translatable="false">5</string>
+    <string name="grid_size_6" translatable="false">6</string>
+    <string name="grid_size_7" translatable="false">7</string>
+    <string name="grid_size_8" translatable="false">8</string>
+</resources>
