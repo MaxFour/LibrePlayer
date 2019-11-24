@@ -8,7 +8,7 @@
 Based on [Retro Music Player](https://github.com/h4h13/RetroMusicPlayer)
 <p align="center"><img width="128" height="128" src="images/Icon.png" /></p>
 
-<a target="_blank" href="/icons/set/music">Music icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/music">Music icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 ### Donation
 
