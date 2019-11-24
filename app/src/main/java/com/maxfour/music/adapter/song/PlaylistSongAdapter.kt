@@ -12,8 +12,8 @@ import com.maxfour.music.R
 import com.maxfour.music.helper.MusicPlayerRemote
 import com.maxfour.music.interfaces.CabHolder
 import com.maxfour.music.model.Song
-import com.maxfour.music.util.NavigationUtil
 import com.maxfour.music.util.MusicColorUtil
+import com.maxfour.music.util.NavigationUtil
 import java.util.*
 
 open class PlaylistSongAdapter(

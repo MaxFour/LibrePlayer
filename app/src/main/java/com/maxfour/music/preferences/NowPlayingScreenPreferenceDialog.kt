@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.preference.PreferenceDialogFragmentCompat
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
@@ -80,9 +79,6 @@ class NowPlayingScreenPreferenceDialog : PreferenceDialogFragmentCompat(), ViewP
             positiveButton(R.string.apply) {
                 val nowPlayingScreen = NowPlayingScreen.values()[viewPagerPosition]
                 if (isNowPlayingThemes(nowPlayingScreen)) {
-                    val result = getString(nowPlayingScreen.titleRes)
-                    Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
-                } else {
                     PreferenceUtil.getInstance(requireContext()).nowPlayingScreen = nowPlayingScreen
                 }
             }
@@ -98,14 +94,20 @@ class NowPlayingScreenPreferenceDialog : PreferenceDialogFragmentCompat(), ViewP
             PreferenceUtil.getInstance(requireContext()).resetCircularAlbumArt()
         }
 
-        return (nowPlayingScreen == NowPlayingScreen.FULL ||
-                nowPlayingScreen == NowPlayingScreen.CARD ||
-                nowPlayingScreen == NowPlayingScreen.PLAIN ||
+        return (nowPlayingScreen == NowPlayingScreen.ADAPTIVE ||
                 nowPlayingScreen == NowPlayingScreen.BLUR ||
-                nowPlayingScreen == NowPlayingScreen.COLOR ||
-                nowPlayingScreen == NowPlayingScreen.SIMPLE ||
                 nowPlayingScreen == NowPlayingScreen.BLUR_CARD ||
-                nowPlayingScreen == NowPlayingScreen.ADAPTIVE)
+                nowPlayingScreen == NowPlayingScreen.CARD ||
+                nowPlayingScreen == NowPlayingScreen.COLOR ||
+                nowPlayingScreen == NowPlayingScreen.FIT ||
+                nowPlayingScreen == NowPlayingScreen.FLAT ||
+                nowPlayingScreen == NowPlayingScreen.FULL ||
+                nowPlayingScreen == NowPlayingScreen.MATERIAL ||
+                nowPlayingScreen == NowPlayingScreen.NORMAL ||
+                nowPlayingScreen == NowPlayingScreen.PEAK ||
+                nowPlayingScreen == NowPlayingScreen.PLAIN ||
+                nowPlayingScreen == NowPlayingScreen.SIMPLE ||
+                nowPlayingScreen == NowPlayingScreen.TINY)
     }
 
     companion object {

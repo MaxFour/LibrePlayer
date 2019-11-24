@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="about_settings_summary">Исходный код и версия</string>
     <string name="accent_color">Цвет акцента</string>
-    <string name="accent_color_desc">Цвет акцента темы, по умолчанию сине-зелёный</string>
+    <string name="accent_color_desc">Цвет акцента темы, по умолчанию зелёный</string>
     <string name="action_about">О программe</string>
     <string name="action_add_to_favorites">Добавить в избранное</string>
     <string name="action_add_to_playing_queue">Добавить в очередь воспроизведения</string>
@@ -197,15 +197,15 @@
     <string name="new_profile_photo">Новое фото профиля</string>
     <string name="new_start_directory">%s новая начальная папка</string>
     <string name="next_song">Следующая песня</string>
-    <string name="no_albums">Альбомы отсутствуют</string>
-    <string name="no_artists">Исполнители отсутствуют</string>
+    <string name="no_albums">У Вас отсутствуют альбомы</string>
+    <string name="no_artists">У Вас отсутствуют исполнители</string>
     <string name="no_audio_ID">Сначала воспроизведите песню, а затем попробуйте снова</string>
     <string name="no_equalizer">Эквалайзер не найден</string>
-    <string name="no_genres">Жанры отсутствуют</string>
+    <string name="no_genres">У Вас отсутствуют жанры</string>
     <string name="no_lyrics_found">Текст отсутствует</string>
-    <string name="no_playlists">Плейлисты отсутствуют</string>
+    <string name="no_playlists">У Вас отсутствуют плейлисты</string>
     <string name="no_results">Нет результатов</string>
-    <string name="no_songs">Нет песен</string>
+    <string name="no_songs">У Вас отсутствуют песни</string>
     <string name="normal">Обычная</string>
     <string name="normal_lyrics">Обычный текст</string>
     <string name="normal_style">Обычный</string>

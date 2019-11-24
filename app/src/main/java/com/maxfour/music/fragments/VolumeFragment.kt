@@ -1,23 +1,18 @@
 package com.maxfour.music.fragments
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.PorterDuff
+import android.graphics.*
 import android.media.AudioManager
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
 import com.maxfour.appthemehelper.ThemeStore
 import com.maxfour.appthemehelper.util.ATHUtil
 import com.maxfour.music.R
 import com.maxfour.music.helper.MusicPlayerRemote
-import com.maxfour.music.util.PreferenceUtil
-import com.maxfour.music.util.ViewUtil
-import com.maxfour.music.volume.AudioVolumeObserver
-import com.maxfour.music.volume.OnAudioVolumeChangedListener
+import com.maxfour.music.util.*
+import com.maxfour.music.volume.*
 import kotlinx.android.synthetic.main.fragment_volume.*
 
 class VolumeFragment : Fragment(), SeekBar.OnSeekBarChangeListener, OnAudioVolumeChangedListener, View.OnClickListener {
@@ -25,20 +20,21 @@ class VolumeFragment : Fragment(), SeekBar.OnSeekBarChangeListener, OnAudioVolum
     private var audioVolumeObserver: AudioVolumeObserver? = null
 
     private val audioManager: AudioManager?
-        get() = context!!.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        get() = requireContext().getSystemService(Context.AUDIO_SERVICE) as AudioManager
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_volume, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setTintable(ThemeStore.accentColor(context!!))
+        setTintable(ThemeStore.accentColor(requireContext()))
         volumeDown.setOnClickListener(this)
         volumeUp.setOnClickListener(this)
 
-        val iconColor = ATHUtil.resolveColor(context!!, R.attr.iconColor)
+        val iconColor = ATHUtil.resolveColor(requireContext(), R.attr.iconColor)
         volumeDown.setColorFilter(iconColor, PorterDuff.Mode.SRC_IN)
         volumeUp.setColorFilter(iconColor, PorterDuff.Mode.SRC_IN)
     }
@@ -46,7 +42,7 @@ class VolumeFragment : Fragment(), SeekBar.OnSeekBarChangeListener, OnAudioVolum
     override fun onResume() {
         super.onResume()
         if (audioVolumeObserver == null) {
-            audioVolumeObserver = AudioVolumeObserver(activity!!)
+            audioVolumeObserver = AudioVolumeObserver(requireActivity())
         }
         audioVolumeObserver!!.register(AudioManager.STREAM_MUSIC, this)
 
@@ -94,8 +90,12 @@ class VolumeFragment : Fragment(), SeekBar.OnSeekBarChangeListener, OnAudioVolum
     override fun onClick(view: View) {
         val audioManager = audioManager
         when (view.id) {
-            R.id.volumeDown -> audioManager?.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, 0)
-            R.id.volumeUp -> audioManager?.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, 0)
+            R.id.volumeDown -> audioManager?.adjustStreamVolume(
+                    AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, 0
+            )
+            R.id.volumeUp   -> audioManager?.adjustStreamVolume(
+                    AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, 0
+            )
         }
     }
 
@@ -117,10 +117,9 @@ class VolumeFragment : Fragment(), SeekBar.OnSeekBarChangeListener, OnAudioVolum
     }
 
     private fun setPauseWhenZeroVolume(pauseWhenZeroVolume: Boolean) {
-        if (PreferenceUtil.getInstance(requireContext()).pauseOnZeroVolume())
-            if (MusicPlayerRemote.isPlaying && pauseWhenZeroVolume) {
-                MusicPlayerRemote.pauseSong()
-            }
+        if (PreferenceUtil.getInstance(requireContext()).pauseOnZeroVolume()) if (MusicPlayerRemote.isPlaying && pauseWhenZeroVolume) {
+            MusicPlayerRemote.pauseSong()
+        }
     }
 
     fun setTintableColor(color: Int) {

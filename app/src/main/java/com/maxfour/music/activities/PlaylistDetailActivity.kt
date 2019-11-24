@@ -29,8 +29,8 @@ import com.maxfour.music.model.Song
 import com.maxfour.music.mvp.presenter.PlaylistSongsPresenter
 import com.maxfour.music.mvp.presenter.PlaylistSongsView
 import com.maxfour.music.util.DensityUtil
-import com.maxfour.music.util.PlaylistsUtil
 import com.maxfour.music.util.MusicColorUtil
+import com.maxfour.music.util.PlaylistsUtil
 import com.maxfour.music.util.ViewUtil
 import kotlinx.android.synthetic.main.activity_playlist_detail.*
 import javax.inject.Inject

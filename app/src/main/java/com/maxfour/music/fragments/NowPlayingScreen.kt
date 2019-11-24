@@ -4,7 +4,6 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.maxfour.music.R
 
-
 enum class NowPlayingScreen constructor(@param:StringRes @field:StringRes
                                         val titleRes: Int,
                                         @param:DrawableRes @field:DrawableRes val drawableResId: Int,

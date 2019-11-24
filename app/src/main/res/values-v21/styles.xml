@@ -18,12 +18,6 @@
         <item name="android:textViewStyle">@style/TextViewStyleIm</item>
     </style>
 
-    <style name="TextViewStyle" parent="android:Widget.Material.TextView" />
-
-    <style name="TextViewStyleIm" parent="TextViewStyle">
-        <item name="android:hyphenationFrequency">none</item>
-    </style>
-
     <style name="Theme.Music.Notification" parent="@android:style/TextAppearance.Material.Notification" />
 
     <style name="Theme.Music.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title" />

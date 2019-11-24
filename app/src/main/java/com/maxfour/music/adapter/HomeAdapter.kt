@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IntDef
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textview.MaterialTextView
@@ -40,9 +41,7 @@ class HomeAdapter(
 			else                        -> {
 				AlbumViewHolder(
 						LayoutInflater.from(activity).inflate(
-								R.layout.metal_section_recycler_view,
-								parent,
-								false
+								R.layout.metal_section_recycler_view, parent, false
 						)
 				)
 			}
@@ -141,10 +140,7 @@ class HomeAdapter(
 				recyclerView.apply {
 					show()
 					layoutManager = GridLayoutManager(
-							activity,
-							1,
-							GridLayoutManager.HORIZONTAL,
-							false
+							activity, 1, GridLayoutManager.HORIZONTAL, false
 					)
 					val artistAdapter = ArtistAdapter(
 							activity,
@@ -170,17 +166,10 @@ class HomeAdapter(
 					recyclerView.apply {
 						show()
 						val songAdapter = SongAdapter(
-								activity,
-								songs,
-								R.layout.item_album_card,
-								false,
-								null
+								activity, songs, R.layout.item_album_card, false, null
 						)
 						layoutManager = GridLayoutManager(
-								activity,
-								1,
-								GridLayoutManager.HORIZONTAL,
-								false
+								activity, 1, GridLayoutManager.HORIZONTAL, false
 						)
 						adapter = songAdapter
 
@@ -196,7 +185,7 @@ class HomeAdapter(
 	open inner class AbsHomeViewItem(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		val recyclerView: RecyclerView = itemView.findViewById(R.id.recyclerView)
 		val titleContainer: View = itemView.findViewById(R.id.titleContainer)
-		val title: MaterialTextView = itemView.findViewById(R.id.title)
+		val title: AppCompatTextView = itemView.findViewById(R.id.title)
 		val text: MaterialTextView = itemView.findViewById(R.id.text)
 	}
 }

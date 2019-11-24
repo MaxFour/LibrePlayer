@@ -1,11 +1,8 @@
 package com.maxfour.music.mvp.presenter
 
 import com.maxfour.music.Result
-import com.maxfour.music.model.Playlist
-import com.maxfour.music.model.Song
-import com.maxfour.music.mvp.BaseView
-import com.maxfour.music.mvp.Presenter
-import com.maxfour.music.mvp.PresenterImpl
+import com.maxfour.music.model.*
+import com.maxfour.music.mvp.*
 import com.maxfour.music.providers.interfaces.Repository
 import kotlinx.coroutines.*
 import javax.inject.Inject
@@ -33,9 +30,7 @@ interface PlaylistSongsPresenter : Presenter<PlaylistSongsView> {
                     is Result.Success -> withContext(Dispatchers.Main) {
                         view?.songs(songs.data)
                     }
-                    is Result.Error -> withContext(Dispatchers.Main) {
-                        view?.showEmptyView()
-                    }
+                    is Result.Error -> withContext(Dispatchers.Main) { view?.showEmptyView() }
                 }
             }
         }

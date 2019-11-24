@@ -8,6 +8,8 @@
     <string name="app_shortcut_shuffle_all_long" translatable="false">@string/action_shuffle_all</string>
     <string name="app_shortcut_top_tracks_long" translatable="false">@string/my_top_songs</string>
 
+    <string name="empty_text_emoji" translatable="false">&#129300;</string>
+
     <string name="grid_size_1" translatable="false">1</string>
     <string name="grid_size_2" translatable="false">2</string>
     <string name="grid_size_3" translatable="false">3</string>

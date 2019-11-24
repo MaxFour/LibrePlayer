@@ -8,8 +8,8 @@ import androidx.appcompat.widget.AppCompatImageView
 import com.maxfour.appthemehelper.util.ATHUtil
 import com.maxfour.appthemehelper.util.ColorUtil
 import com.maxfour.music.R
-import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.MusicColorUtil
+import com.maxfour.music.util.PreferenceUtil
 
 class ColorIconsImageView : AppCompatImageView {
 

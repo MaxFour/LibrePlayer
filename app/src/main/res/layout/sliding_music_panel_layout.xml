@@ -26,6 +26,7 @@
         app:behavior_hideable="false"
         app:behavior_peekHeight="0dp"
         app:cardBackgroundColor="?colorSecondary"
+        app:cardCornerRadius="0dp"
         app:cardUseCompatPadding="false"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         app:strokeWidth="0dp">
@@ -53,6 +54,8 @@
         android:background="?colorSecondary"
         android:elevation="0dp"
         android:visibility="gone"
+        app:itemBackground="@drawable/bottom_navigation_item_background"
+        app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@drawable/bottom_navigation_item_colors"
         app:itemTextAppearanceActive="@style/BottomSheetItemTextAppearanceActive"
         app:itemTextAppearanceInactive="@style/BottomSheetItemTextAppearanceInactive"

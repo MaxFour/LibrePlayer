@@ -57,9 +57,9 @@ import com.maxfour.music.service.notification.PlayingNotification;
 import com.maxfour.music.service.notification.PlayingNotificationImpl24;
 import com.maxfour.music.service.notification.PlayingNotificationOreo;
 import com.maxfour.music.service.playback.Playback;
+import com.maxfour.music.util.MusicPlayerUtil;
 import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.PreferenceUtil;
-import com.maxfour.music.util.MusicPlayerUtil;
 
 import java.util.ArrayList;
 import java.util.List;

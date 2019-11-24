@@ -2,9 +2,7 @@ package com.maxfour.music.mvp.presenter
 
 import com.maxfour.music.Result
 import com.maxfour.music.model.Album
-import com.maxfour.music.mvp.BaseView
-import com.maxfour.music.mvp.Presenter
-import com.maxfour.music.mvp.PresenterImpl
+import com.maxfour.music.mvp.*
 import com.maxfour.music.providers.interfaces.Repository
 import kotlinx.coroutines.*
 import java.util.*
@@ -12,7 +10,7 @@ import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
 interface AlbumsView : BaseView {
-    fun albums(albums: ArrayList<Album>)
+      fun albums(albums: ArrayList<Album>)
 }
 
 interface AlbumsPresenter : Presenter<AlbumsView> {
@@ -35,14 +33,10 @@ interface AlbumsPresenter : Presenter<AlbumsView> {
         override fun loadAlbums() {
             launch {
                 when (val result = repository.allAlbums()) {
-                    is Result.Success -> {
-                        withContext(Dispatchers.Main) {
-                            view?.albums(result.data)
-                        }
+                    is Result.Success -> withContext(Dispatchers.Main) {
+                        view?.albums(result.data)
                     }
-                    is Result.Error -> {
-                        view?.showEmptyView()
-                    }
+                    is Result.Error   -> withContext(Dispatchers.Main) { view?.showEmptyView() }
                 }
             }
         }

@@ -1,17 +1,13 @@
 package com.maxfour.music.fragments.base
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.annotation.NonNull
-import androidx.annotation.StringRes
+import android.view.*
+import androidx.annotation.*
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.AppBarLayout
 import com.maxfour.music.R
 import com.maxfour.music.helper.MusicPlayerRemote
-import com.maxfour.music.util.DensityUtil
-import com.maxfour.music.util.ViewUtil
+import com.maxfour.music.util.*
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
 import kotlinx.android.synthetic.main.fragment_main_activity_recycler_view.*
 
@@ -20,9 +16,12 @@ abstract class AbsLibraryPagerRecyclerViewFragment<A : RecyclerView.Adapter<*>, 
     protected var adapter: A? = null
     protected var layoutManager: LM? = null
 
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_main_activity_recycler_view, container, false);
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(
+                R.layout.fragment_main_activity_recycler_view, container, false
+        );
         return view
     }
 
@@ -36,7 +35,9 @@ abstract class AbsLibraryPagerRecyclerViewFragment<A : RecyclerView.Adapter<*>, 
 
     private fun setUpRecyclerView() {
         if (recyclerView is FastScrollRecyclerView) {
-            ViewUtil.setUpFastScrollRecyclerViewColor(requireActivity(), recyclerView as FastScrollRecyclerView)
+            ViewUtil.setUpFastScrollRecyclerViewColor(
+                    requireActivity(), recyclerView as FastScrollRecyclerView
+            )
         }
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
@@ -54,10 +55,14 @@ abstract class AbsLibraryPagerRecyclerViewFragment<A : RecyclerView.Adapter<*>, 
     }
 
     protected open val emptyMessage: Int
-        @StringRes
-        get() = R.string.empty
+        @StringRes get() = R.string.empty
+
+    private fun getEmojiByUnicode(unicode: Int): String {
+        return String(Character.toChars(unicode))
+    }
 
     private fun checkIsEmpty() {
+        emptyEmoji.text = getEmojiByUnicode(0x1F631)
         emptyText.setText(emptyMessage)
         empty.visibility = if (adapter!!.itemCount == 0) View.VISIBLE else View.GONE
     }
@@ -84,8 +89,12 @@ abstract class AbsLibraryPagerRecyclerViewFragment<A : RecyclerView.Adapter<*>, 
     protected abstract fun createAdapter(): A
 
     override fun onOffsetChanged(p0: AppBarLayout?, i: Int) {
-        container.setPadding(container.paddingLeft, container.paddingTop,
-                container.paddingRight, libraryFragment.totalAppBarScrollingRange + i)
+        container.setPadding(
+                container.paddingLeft,
+                container.paddingTop,
+                container.paddingRight,
+                libraryFragment.totalAppBarScrollingRange + i
+        )
     }
 
     override fun onQueueChanged() {

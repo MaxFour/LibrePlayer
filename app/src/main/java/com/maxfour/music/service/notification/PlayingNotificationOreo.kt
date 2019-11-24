@@ -23,9 +23,9 @@ import com.maxfour.music.glide.palette.BitmapPaletteWrapper
 import com.maxfour.music.model.Song
 import com.maxfour.music.service.MusicService
 import com.maxfour.music.service.MusicService.*
-import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.MusicPlayerUtil
 import com.maxfour.music.util.MusicPlayerUtil.createBitmap
+import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.color.MediaNotificationProcessor
 
 class PlayingNotificationOreo : PlayingNotification() {

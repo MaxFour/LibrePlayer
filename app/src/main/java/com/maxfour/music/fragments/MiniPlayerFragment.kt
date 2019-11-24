@@ -15,9 +15,9 @@ import com.maxfour.music.fragments.base.AbsMusicServiceFragment
 import com.maxfour.music.helper.MusicPlayerRemote
 import com.maxfour.music.helper.MusicProgressViewUpdateHelper
 import com.maxfour.music.helper.PlayPauseButtonOnClickHandler
+import com.maxfour.music.util.MusicPlayerUtil
 import com.maxfour.music.util.NavigationUtil
 import com.maxfour.music.util.PreferenceUtil
-import com.maxfour.music.util.MusicPlayerUtil
 import com.maxfour.music.util.ViewUtil
 import kotlinx.android.synthetic.main.fragment_mini_player.*
 import kotlin.math.abs

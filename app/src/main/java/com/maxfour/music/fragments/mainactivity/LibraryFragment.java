@@ -33,9 +33,9 @@ import com.maxfour.music.fragments.base.AbsMainActivityFragment;
 import com.maxfour.music.helper.SortOrder;
 import com.maxfour.music.interfaces.CabHolder;
 import com.maxfour.music.interfaces.MainActivityFragmentCallbacks;
-import com.maxfour.music.util.NavigationUtil;
 import com.maxfour.music.util.MusicColorUtil;
 import com.maxfour.music.util.MusicPlayerUtil;
+import com.maxfour.music.util.NavigationUtil;
 
 import org.jetbrains.annotations.NotNull;
 

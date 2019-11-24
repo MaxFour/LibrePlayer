@@ -33,9 +33,9 @@ import com.maxfour.music.lyrics.LrcView
 import com.maxfour.music.model.Song
 import com.maxfour.music.model.lyrics.Lyrics
 import com.maxfour.music.util.LyricUtil
+import com.maxfour.music.util.MusicPlayerUtil
 import com.maxfour.music.util.MusicUtil
 import com.maxfour.music.util.PreferenceUtil
-import com.maxfour.music.util.MusicPlayerUtil
 import kotlinx.android.synthetic.main.activity_lyrics.*
 import kotlinx.android.synthetic.main.fragment_lyrics.*
 import kotlinx.android.synthetic.main.fragment_synced.*

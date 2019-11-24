@@ -7,8 +7,8 @@ import com.maxfour.appthemehelper.util.ATHUtil
 import com.maxfour.music.R
 import com.maxfour.music.glide.palette.BitmapPaletteTarget
 import com.maxfour.music.glide.palette.BitmapPaletteWrapper
-import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.MusicColorUtil
+import com.maxfour.music.util.PreferenceUtil
 
 abstract class MusicPlayerColoredTarget(view: ImageView) : BitmapPaletteTarget(view) {
 

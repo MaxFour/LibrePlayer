@@ -27,9 +27,9 @@ import com.maxfour.music.model.smartplaylist.LastAddedPlaylist
 import com.maxfour.music.model.smartplaylist.MyTopTracksPlaylist
 import com.maxfour.music.mvp.presenter.HomePresenter
 import com.maxfour.music.mvp.presenter.HomeView
+import com.maxfour.music.util.MusicColorUtil
 import com.maxfour.music.util.NavigationUtil
 import com.maxfour.music.util.PreferenceUtil
-import com.maxfour.music.util.MusicColorUtil
 import kotlinx.android.synthetic.main.abs_playlists.*
 import kotlinx.android.synthetic.main.fragment_banner_home.*
 import kotlinx.android.synthetic.main.home_content.*

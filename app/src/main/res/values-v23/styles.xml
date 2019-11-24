@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewStyleIm" parent="android:Widget.Material.TextView">
+        <item name="android:hyphenationFrequency">none</item>
+    </style>
+
+    <style name="BottomSheetItemTextAppearanceInactive" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:breakStrategy">simple</item>
+        <item name="android:hyphenationFrequency">none</item>
+        <item name="android:fontFamily">@font/circular</item>
+    </style>
+
+    <style name="BottomSheetItemTextAppearanceActive" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:breakStrategy">simple</item>
+        <item name="android:hyphenationFrequency">none</item>
+        <item name="android:fontFamily">@font/circular</item>
+    </style>
+</resources>

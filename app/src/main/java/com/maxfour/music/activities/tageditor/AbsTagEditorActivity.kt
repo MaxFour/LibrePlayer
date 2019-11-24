@@ -26,8 +26,8 @@ import com.maxfour.appthemehelper.util.TintHelper
 import com.maxfour.music.R
 import com.maxfour.music.activities.base.AbsBaseActivity
 import com.maxfour.music.activities.saf.SAFGuideActivity
-import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.MusicPlayerUtil
+import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.SAFUtil
 import kotlinx.android.synthetic.main.activity_album_tag_editor.*
 import org.jaudiotagger.audio.AudioFile

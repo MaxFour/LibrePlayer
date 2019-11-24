@@ -3,28 +3,18 @@ package com.maxfour.music.fragments.player.fit
 import android.animation.ObjectAnimator
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.animation.AccelerateInterpolator
-import android.view.animation.DecelerateInterpolator
-import android.view.animation.LinearInterpolator
+import android.view.*
+import android.view.animation.*
 import android.widget.SeekBar
 import com.maxfour.appthemehelper.ThemeStore
-import com.maxfour.appthemehelper.util.ATHUtil
-import com.maxfour.appthemehelper.util.ColorUtil
-import com.maxfour.appthemehelper.util.MaterialValueHelper
-import com.maxfour.appthemehelper.util.TintHelper
+import com.maxfour.appthemehelper.util.*
 import com.maxfour.music.R
 import com.maxfour.music.extensions.ripAlpha
 import com.maxfour.music.fragments.base.AbsPlayerControlsFragment
-import com.maxfour.music.helper.MusicPlayerRemote
-import com.maxfour.music.helper.MusicProgressViewUpdateHelper
-import com.maxfour.music.helper.PlayPauseButtonOnClickHandler
+import com.maxfour.music.helper.*
 import com.maxfour.music.misc.SimpleOnSeekbarChangeListener
 import com.maxfour.music.service.MusicService
-import com.maxfour.music.util.MusicUtil
-import com.maxfour.music.util.PreferenceUtil
+import com.maxfour.music.util.*
 import kotlinx.android.synthetic.main.fragment_player_playback_controls.*
 
 class FitPlaybackControlsFragment : AbsPlayerControlsFragment() {
@@ -116,7 +106,7 @@ class FitPlaybackControlsFragment : AbsPlayerControlsFragment() {
         val colorFinal = if (PreferenceUtil.getInstance(requireContext()).adaptiveColor) {
             color
         } else {
-            ThemeStore.accentColor(context!!).ripAlpha()
+            ThemeStore.accentColor(requireContext()).ripAlpha()
         }
 
         volumeFragment?.setTintable(colorFinal)

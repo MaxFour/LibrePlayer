@@ -1,6 +1,5 @@
 package com.maxfour.music.activities
 
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.annotation.StringRes
@@ -12,6 +11,7 @@ import com.maxfour.music.R
 import com.maxfour.music.activities.base.AbsBaseActivity
 import com.maxfour.music.fragments.settings.MainSettingsFragment
 import kotlinx.android.synthetic.main.activity_settings.*
+
 class SettingsActivity : AbsBaseActivity() {
 
     private val fragmentManager = supportFragmentManager

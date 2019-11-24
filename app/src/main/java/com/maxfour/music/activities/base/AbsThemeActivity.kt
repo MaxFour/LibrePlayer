@@ -17,8 +17,8 @@ import com.maxfour.appthemehelper.util.ColorUtil
 import com.maxfour.appthemehelper.util.TintHelper
 import com.maxfour.appthemehelper.util.VersionUtils
 import com.maxfour.music.R
-import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.MusicPlayerUtil
+import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.ThemeManager
 
 abstract class AbsThemeActivity : ATHToolbarActivity(), Runnable {

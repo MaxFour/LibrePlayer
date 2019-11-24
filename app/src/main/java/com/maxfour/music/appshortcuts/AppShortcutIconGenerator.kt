@@ -11,8 +11,8 @@ import android.util.TypedValue
 import androidx.annotation.RequiresApi
 import com.maxfour.appthemehelper.ThemeStore
 import com.maxfour.music.R
-import com.maxfour.music.util.PreferenceUtil
 import com.maxfour.music.util.MusicPlayerUtil
+import com.maxfour.music.util.PreferenceUtil
 
 @RequiresApi(Build.VERSION_CODES.N_MR1)
 object AppShortcutIconGenerator {
