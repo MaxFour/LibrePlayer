@@ -44,7 +44,7 @@
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_marginStart="16dp"
-                tools:src="@drawable/ic_audiotrack_black_24dp"
+                tools:src="@drawable/ic_notification"
                 tools:tint="@color/md_black_1000" />
 
             <TextView
@@ -55,18 +55,8 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:singleLine="true"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 tools:text="@string/app_name" />
-
-            <ImageView
-                android:id="@+id/arrow"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="2dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/ic_keyboard_arrow_up_24dp"
-                android:tint="@color/dark_grey"
-                tools:ignore="VectorDrawableCompat" />
 
         </LinearLayout>
 
@@ -79,7 +69,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
             android:singleLine="true"
-            android:textAppearance="@style/Theme.Music.Notification"
+            android:textAppearance="@style/Theme.Player.Notification"
             android:textStyle="bold"
             tools:text="@tools:sample/lorem/random" />
 
@@ -92,7 +82,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
             android:singleLine="true"
-            android:textAppearance="@style/Theme.Music.Notification.Title"
+            android:textAppearance="@style/Theme.Player.Notification.Title"
             tools:text="@tools:sample/lorem/random" />
 
         <LinearLayout

@@ -1,6 +1,8 @@
 package com.maxfour.appthemehelper.util
 
 import android.content.res.ColorStateList
+import androidx.appcompat.widget.AppCompatButton
+import com.afollestad.materialdialogs.internal.button.DialogActionButton
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
 import com.maxfour.appthemehelper.ThemeStore
@@ -43,5 +45,19 @@ object MaterialUtil {
             textInputLayout.isHintAnimationEnabled = true
         }
 
+    }
+
+    fun setTint(button: DialogActionButton, color: Int = ThemeStore.accentColor(button.context), background: Boolean = true) {
+        val temp = button as AppCompatButton
+        val context = temp.context
+        val colorState = ColorStateList.valueOf(color)
+        val textColor = ColorStateList.valueOf(MaterialValueHelper.getPrimaryTextColor(context, ColorUtil.isColorLight(color)))
+
+        if (background) {
+            temp.backgroundTintList = colorState
+            temp.setTextColor(textColor)
+        } else {
+            temp.setTextColor(colorState)
+        }
     }
 }

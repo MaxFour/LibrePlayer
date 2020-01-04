@@ -5,23 +5,22 @@
         android:layout="@layout/preference_category_title"
         android:title="@string/pref_header_general">
 
-        <com.maxfour.music.preferences.MaterialListPreference
+        <com.maxfour.libreplayer.preferences.MaterialListPreference
             android:defaultValue="light"
             android:entries="@array/pref_general_theme_list_titles"
             android:entryValues="@array/pref_general_theme_list_values"
             android:key="general_theme"
             android:layout="@layout/list_item_view"
             android:title="@string/pref_title_general_theme"
-            app:enableCopying="true"
             app:icon="@drawable/ic_color_lens_white_24dp" />
 
         <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:key="black_theme"
             android:layout="@layout/list_item_view_switch_no_title"
-            android:title="@string/black_theme_name"
-            app:enableCopying="true" />
+            android:title="@string/black_theme_name" />
 
     </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
     <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
         android:key="category_color"
         android:layout="@layout/preference_category_title"
@@ -33,7 +32,6 @@
             android:persistent="false"
             android:summary="@string/accent_color_desc"
             android:title="@string/accent_color"
-            app:enableCopying="true"
             app:icon="@drawable/ic_colorize_white_24dp" />
 
         <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
@@ -41,32 +39,29 @@
             android:key="desaturated_color"
             android:layout="@layout/list_item_view_switch"
             android:summary="@string/pref_summary_desaturated_color"
-            android:title="@string/pref_title_desaturated_color"
-            app:enableCopying="true" />
+            android:title="@string/pref_title_desaturated_color" />
 
         <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:defaultValue="false"
             android:key="adaptive_color_app"
             android:layout="@layout/list_item_view_switch"
             android:summary="@string/pref_summary_colored_app"
-            android:title="@string/pref_title_colored_app"
-            app:enableCopying="true" />
+            android:title="@string/pref_title_colored_app" />
 
         <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:defaultValue="false"
             android:key="should_color_app_shortcuts"
             android:layout="@layout/list_item_view_switch"
             android:summary="@string/pref_summary_colored_app_shortcuts"
-            android:title="@string/pref_title_app_shortcuts"
-            app:enableCopying="true" />
+            android:title="@string/pref_title_app_shortcuts" />
 
         <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:defaultValue="false"
             android:key="dominant_color"
             android:layout="@layout/list_item_view_switch"
             android:summary="@string/pref_summary_dominant_color"
-            android:title="@string/pref_title_toggle_dominant_color"
-            app:enableCopying="true" />
+            android:title="@string/pref_title_toggle_dominant_color" />
 
     </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
 </androidx.preference.PreferenceScreen>

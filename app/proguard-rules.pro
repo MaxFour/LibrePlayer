@@ -1,6 +1,6 @@
 # Add project specific ProGuard rules here.
 # By default, the flags in this file are appended to flags specified
-# in /Users/hemanths/Library/Android/sdk/tools/proguard/proguard-android.txt
+# in C://Android/SDK/tools/proguard/proguard-android.txt
 # You can edit the include path and order by changing the proguardFiles
 # directive in build.gradle.
 #
@@ -64,7 +64,7 @@
 #-keep class org.jaudiotagger.** { *; }
 
 #For cast
--keep class com.maxfour.music.cast.CastOptionsProvider { *; }
+-keep class com.maxfour.libreplayer.cast.CastOptionsProvider { *; }
 -keep class android.support.** { *; }
 -keep class com.google.** { *; }
 -keep class java.nio.file.** { *; }

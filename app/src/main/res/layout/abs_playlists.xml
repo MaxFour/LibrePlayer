@@ -1,50 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingBottom="12dp">
-
-
-    <com.maxfour.music.views.CircularImageView
-        android:id="@+id/userImage"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:civ_border="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ellipsize="end"
-        android:text="@string/welcome"
-        android:textColor="?colorOnBackground"
-        app:layout_constraintStart_toEndOf="@+id/userImage"
-        app:layout_constraintTop_toTopOf="@+id/userImage" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/titleWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:padding="0dp"
-        android:textAppearance="@style/TextViewHeadline5"
-        android:textColor="?colorOnPrimary"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/userImage"
-        app:layout_constraintStart_toEndOf="@+id/userImage"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        tools:text="@string/app_name" />
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/history"
@@ -55,9 +15,9 @@
         app:layout_constraintEnd_toStartOf="@+id/lastAdded"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleWelcome">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.maxfour.music.views.ColorIconsImageView
+        <com.maxfour.libreplayer.views.ColorIconsImageView
             android:id="@+id/v1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,8 +39,7 @@
             android:text="@string/history"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/v1"
-            tools:text="Hemanth savarala kumar dai" />
+            app:layout_constraintTop_toBottomOf="@+id/v1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -93,7 +52,7 @@
         app:layout_constraintStart_toEndOf="@+id/history"
         app:layout_constraintTop_toTopOf="@+id/history">
 
-        <com.maxfour.music.views.ColorIconsImageView
+        <com.maxfour.libreplayer.views.ColorIconsImageView
             android:id="@+id/v2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,11 +73,9 @@
             android:gravity="center"
             android:paddingTop="8dp"
             android:text="@string/last_added"
-            android:textColor="?colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/v2"
-            tools:text="Hemanth savarala" />
+            app:layout_constraintTop_toBottomOf="@+id/v2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -132,7 +89,7 @@
         app:layout_constraintStart_toEndOf="@+id/lastAdded"
         app:layout_constraintTop_toTopOf="@+id/lastAdded">
 
-        <com.maxfour.music.views.ColorIconsImageView
+        <com.maxfour.libreplayer.views.ColorIconsImageView
             android:id="@+id/v3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,11 +109,9 @@
             android:gravity="center"
             android:paddingTop="8dp"
             android:text="@string/my_top_songs"
-            android:textColor="?colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/v3"
-            tools:text="Hemanth savarala" />
+            app:layout_constraintTop_toBottomOf="@+id/v3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -170,7 +125,7 @@
         app:layout_constraintStart_toEndOf="@+id/topPlayed"
         app:layout_constraintTop_toTopOf="@+id/topPlayed">
 
-        <com.maxfour.music.views.ColorIconsImageView
+        <com.maxfour.libreplayer.views.ColorIconsImageView
             android:id="@+id/v4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -190,11 +145,9 @@
             android:gravity="center"
             android:paddingTop="8dp"
             android:text="@string/shuffle"
-            android:textColor="?colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/v4"
-            tools:text="Hemanth savarala" />
+            app:layout_constraintTop_toBottomOf="@+id/v4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

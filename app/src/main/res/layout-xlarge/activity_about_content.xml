@@ -15,7 +15,7 @@
     grid:layout_columnWeight="1"
     grid:layout_row="0">
 
-    <include layout="@layout/card_music_info"/>
+    <include layout="@layout/card_player_info"/>
 
   </LinearLayout>
 
@@ -27,6 +27,8 @@
     grid:layout_column="1"
     grid:layout_columnWeight="1"
     grid:layout_row="0">
+
+    <include layout="@layout/card_version" />
 
   </LinearLayout>
 </androidx.gridlayout.widget.GridLayout>

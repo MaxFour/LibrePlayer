@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -11,8 +12,10 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?colorPrimary"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
         android:fitsSystemWindows="true"
+        app:elevation="0dp"
         app:liftOnScroll="true">
 
         <com.google.android.material.card.MaterialCardView
@@ -55,16 +58,33 @@
                     <requestFocus />
                 </com.google.android.material.textfield.TextInputEditText>
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/voiceSearch"
+                <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:background="?roundSelector"
-                    android:padding="12dp"
-                    app:srcCompat="@drawable/ic_mic_white_24dp"
-                    app:tint="?colorOnSurface"
-                    tools:visibility="visible" />
+                    android:layout_weight="0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/voiceSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="?roundSelector"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/ic_mic_white_24dp"
+                        app:tint="?colorOnSurface"
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/clearText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?roundSelector"
+                        android:padding="12dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_close_white_24dp"
+                        app:tint="?colorOnSurface"
+                        tools:visibility="visible" />
+                </FrameLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </com.google.android.material.appbar.AppBarLayout>

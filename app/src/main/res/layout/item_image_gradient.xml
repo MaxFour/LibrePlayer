@@ -9,7 +9,7 @@
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true">
 
-    <com.maxfour.music.views.WidthFitSquareLayout
+    <com.maxfour.libreplayer.views.WidthFitSquareLayout
         android:id="@+id/imageContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/shadow_up_home" />
+                
         </LinearLayout>
-    </com.maxfour.music.views.WidthFitSquareLayout>
-
+    </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title"
@@ -57,6 +57,5 @@
         android:textAppearance="@style/TextViewSubtitle1"
         android:textColor="@color/md_white_1000"
         tools:text="@string/bug_report_summary" />
-
 
 </com.google.android.material.card.MaterialCardView>

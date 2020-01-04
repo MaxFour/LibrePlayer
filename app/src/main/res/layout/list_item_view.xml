@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/rectSelector"
+    android:background="?selectableItemBackground"
     android:minHeight="72dp"
     android:orientation="horizontal"
     android:padding="16dp"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="?colorOnSurface"
+        app:tint="?attr/colorControlNormal"
         tools:srcCompat="@drawable/ic_telegram_white" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -34,15 +34,17 @@
         tools:maxLines="@string/grid_size_1"
         tools:text="@tools:sample/lorem" />
 
-    <com.maxfour.music.views.BaselineGridTextView
+    <com.maxfour.libreplayer.views.BaselineGridTextView
         android:id="@android:id/summary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="?android:attr/textColorSecondary"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline_front_margin"
         app:layout_constraintTop_toBottomOf="@android:id/title"
-        app:lineHeightHint="24sp"
+        app:lineHeightHint="20sp"
         tools:maxLines="2"
         tools:text="@tools:sample/lorem/random" />
 

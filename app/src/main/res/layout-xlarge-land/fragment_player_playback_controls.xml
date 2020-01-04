@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ellipsize="end"
-        android:maxLines="1"
+        android:maxLines="2"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:textAppearance="@style/TextViewHeadline5"
@@ -66,7 +66,7 @@
         tools:ignore="MissingPrefix"
         tools:tint="@color/md_black_1000" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/playPauseButton"
         android:layout_width="96dp"
         android:layout_height="96dp"
@@ -130,12 +130,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:fontFamily="sans-serif-medium"
+
+
             android:gravity="center_vertical|right|end"
             android:paddingRight="8dp"
             android:singleLine="true"
             android:textAppearance="@style/TextViewHeadline6"
-            android:textColor="?colorOnSecondary"
+            android:textColor="?android:attr/textColorSecondary"
             tools:ignore="RtlHardcoded,RtlSymmetry"
             tools:text="00:22" />
 
@@ -144,12 +145,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:fontFamily="sans-serif-medium"
+
+
             android:gravity="center_vertical|left|end"
             android:paddingLeft="8dp"
             android:singleLine="true"
             android:textAppearance="@style/TextViewHeadline6"
-            android:textColor="?colorOnSecondary"
+            android:textColor="?android:attr/textColorSecondary"
             tools:ignore="RtlHardcoded,RtlSymmetry"
             tools:text="00:22" />
     </RelativeLayout>

@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.maxfour.music.views.ListItemView
+        <com.maxfour.libreplayer.views.ListItemView
             android:id="@+id/version"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

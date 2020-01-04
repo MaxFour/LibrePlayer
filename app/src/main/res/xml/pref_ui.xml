@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
         android:layout="@layout/preference_category_title"
         app:title="@string/grid_style_label">
-        <com.maxfour.music.preferences.MaterialListPreference
+        <com.maxfour.libreplayer.preferences.MaterialListPreference
             android:defaultValue="0"
             android:entries="@array/pref_grid_style_list_titles"
             android:entryValues="@array/pref_grid_style_list_values"
@@ -14,10 +13,9 @@
             android:negativeButtonText="@null"
             android:positiveButtonText="@null"
             android:title="@string/pref_title_album_grid_style"
-            app:enableCopying="true"
             app:icon="@drawable/ic_album_white_24dp" />
 
-        <com.maxfour.music.preferences.MaterialListPreference
+        <com.maxfour.libreplayer.preferences.MaterialListPreference
             android:defaultValue="0"
             android:entries="@array/pref_grid_style_list_titles"
             android:entryValues="@array/pref_grid_style_list_values"
@@ -26,11 +24,9 @@
             android:negativeButtonText="@null"
             android:positiveButtonText="@null"
             android:title="@string/pref_title_artist_grid_style"
-            app:enableCopying="true"
             app:icon="@drawable/ic_artist_white_24dp" />
 
-
-        <com.maxfour.music.preferences.MaterialListPreference
+        <com.maxfour.libreplayer.preferences.MaterialListPreference
             android:defaultValue="0"
             android:entries="@array/pref_home_grid_style_list_titles"
             android:entryValues="@array/pref_home_grid_style_list_values"
@@ -39,7 +35,6 @@
             android:negativeButtonText="@null"
             android:positiveButtonText="@null"
             android:title="@string/pref_title_home_artist_grid_style"
-            app:enableCopying="true"
             app:icon="@drawable/ic_home_white_24dp" />
 
         <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
@@ -49,30 +44,67 @@
             android:summary="@string/pref_summary_home_banner"
             android:title="@string/pref_title_home_banner" />
 
-        <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
-            android:layout="@layout/preference_category_title"
-            android:title="@string/pref_header_library">
-
-            <com.maxfour.music.preferences.LibraryPreference
-                android:key="library_categories"
-                android:layout="@layout/list_item_view"
-                android:summary="@string/pref_summary_library_categories"
-                android:title="@string/library_categories"
-                app:enableCopying="true"
-                app:icon="@drawable/ic_library_music_white_24dp" />
-
-            <com.maxfour.music.preferences.MaterialListPreference
-                android:defaultValue="1"
-                android:entries="@array/pref_tab_text_mode_titles"
-                android:entryValues="@array/pref_tab_text_mode_values"
-                android:key="tab_text_mode"
-                android:layout="@layout/list_item_view"
-                android:negativeButtonText="@null"
-                android:positiveButtonText="@null"
-                android:title="@string/pref_title_tab_text_mode"
-                app:enableCopying="true" />
-        </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
-
-
     </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/pref_header_library">
+
+        <com.maxfour.libreplayer.preferences.LibraryPreference
+            android:key="library_categories"
+            android:layout="@layout/list_item_view"
+            android:summary="@string/pref_summary_library_categories"
+            android:title="@string/library_categories"
+            app:icon="@drawable/ic_library_music_white_24dp" />
+
+        <com.maxfour.libreplayer.preferences.MaterialListPreference
+            android:defaultValue="1"
+            android:entries="@array/pref_tab_text_mode_titles"
+            android:entryValues="@array/pref_tab_text_mode_values"
+            android:key="tab_text_mode"
+            android:layout="@layout/list_item_view"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_tab_text_mode" />
+    </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/window">
+
+        <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="toggle_full_screen"
+            android:layout="@layout/list_item_view_switch"
+            android:summary="@string/pref_summary_toggle_full_screen"
+            android:title="@string/pref_title_toggle_full_screen"
+            app:icon="@drawable/ic_cellphone_white_24dp" />
+    </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/pref_header_lockscreen">
+        <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="true"
+            android:key="album_art_on_lockscreen"
+            android:layout="@layout/list_item_view_switch"
+            android:summary="@string/pref_summary_album_art_on_lockscreen"
+            android:title="@string/pref_title_album_art_on_lockscreen" />
+
+        <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:dependency="album_art_on_lockscreen"
+            android:key="blurred_album_art"
+            android:layout="@layout/list_item_view_switch"
+            android:summary="@string/pref_summary_blurred_album_art"
+            android:title="@string/pref_title_blurred_album_art" />
+
+        <com.maxfour.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="lock_screen"
+            android:layout="@layout/list_item_view_switch"
+            android:summary="@string/pref_summary_lock_screen"
+            android:title="@string/pref_title_lock_screen" />
+    </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
 </androidx.preference.PreferenceScreen>

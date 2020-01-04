@@ -27,7 +27,7 @@
             <include layout="@layout/status_bar" />
         </FrameLayout>
 
-        <com.maxfour.music.views.WidthFitSquareCardView
+        <com.maxfour.libreplayer.views.WidthFitSquareCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,7 +46,7 @@
                 tools:ignore="ContentDescription,UnusedAttribute"
                 tools:srcCompat="@tools:sample/backgrounds/scenic[10]" />
 
-        </com.maxfour.music.views.WidthFitSquareCardView>
+        </com.maxfour.libreplayer.views.WidthFitSquareCardView>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
 
             <fragment
                 android:id="@+id/playbackControlsFragment"
-                android:name="com.maxfour.music.fragments.player.color.ColorPlaybackControlsFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.color.ColorPlaybackControlsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_color_player_playback_controls" />

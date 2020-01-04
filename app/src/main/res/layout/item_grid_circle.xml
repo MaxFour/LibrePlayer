@@ -14,13 +14,13 @@
         android:orientation="vertical"
         tools:ignore="UnusedAttribute,UselessParent">
 
-        <com.maxfour.music.views.WidthFitSquareLayout
+        <com.maxfour.libreplayer.views.WidthFitSquareLayout
             android:id="@+id/imageContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="4dp">
 
-            <com.maxfour.music.views.CircularImageView
+            <com.maxfour.libreplayer.views.CircularImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -30,7 +30,7 @@
                 tools:ignore="ContentDescription"
                 tools:src="@tools:sample/avatars" />
 
-        </com.maxfour.music.views.WidthFitSquareLayout>
+        </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,18 +46,21 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
+                android:gravity="center"
+                android:maxLines="2"
                 android:textAppearance="@style/TextViewSubtitle1"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textStyle="bold"
-                tools:text="@string/bug_report_summary" />
+                tools:text="@tools:sample/lorem/random" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="4dp"
+                android:paddingTop="2dp"
                 android:singleLine="true"
-                tools:text="@string/bug_report_summary" />
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="@tools:sample/lorem" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

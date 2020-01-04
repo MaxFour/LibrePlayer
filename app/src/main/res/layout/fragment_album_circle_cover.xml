@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.maxfour.music.views.WidthFitSquareLayout
+    <com.maxfour.libreplayer.views.WidthFitSquareLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp">
 
-        <com.maxfour.music.views.CircularImageView
+        <com.maxfour.libreplayer.views.CircularImageView
             android:id="@+id/player_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,5 +20,5 @@
             tools:ignore="ContentDescription,UnusedAttribute"
             tools:srcCompat="@tools:sample/backgrounds/scenic[4]" />
 
-    </com.maxfour.music.views.WidthFitSquareLayout>
+    </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 </FrameLayout>

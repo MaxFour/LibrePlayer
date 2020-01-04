@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.maxfour.music.views.WidthFitSquareLayout
+        <com.maxfour.libreplayer.views.WidthFitSquareLayout
             android:id="@+id/album_cover_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,11 +49,11 @@
 
             <fragment
                 android:id="@+id/playerAlbumCoverFragment"
-                android:name="com.maxfour.music.fragments.player.PlayerAlbumCoverFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.PlayerAlbumCoverFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_album_cover" />
-        </com.maxfour.music.views.WidthFitSquareLayout>
+        </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
 
             <fragment
                 android:id="@+id/playbackControlsFragment"
-                android:name="com.maxfour.music.fragments.player.blur.BlurPlaybackControlsFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.blur.BlurPlaybackControlsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </FrameLayout>

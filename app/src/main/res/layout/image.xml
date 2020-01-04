@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.maxfour.music.views.WidthFitSquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.maxfour.libreplayer.views.WidthFitSquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/imageContainer"
     android:layout_width="match_parent"
@@ -33,4 +33,4 @@
         android:textColor="@color/md_white_1000"
         tools:text="@tools:sample/lorem/random" />
 
-</com.maxfour.music.views.WidthFitSquareLayout>
+</com.maxfour.libreplayer.views.WidthFitSquareLayout>

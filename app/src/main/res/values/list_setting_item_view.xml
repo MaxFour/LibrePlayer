@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingListItemView">
+        <attr name="settingListItemIcon" format="reference" />
+        <attr name="settingListItemIconColor" format="reference" />
+        <attr name="settingListItemTitle" format="string" />
+        <attr name="settingListItemText" format="string" />
+    </declare-styleable>
+</resources>

@@ -7,6 +7,11 @@
     android:clickable="true"
     android:focusable="true">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface" />
+
     <include layout="@layout/shadow_statusbar_toolbar" />
 
 
@@ -27,17 +32,17 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <com.maxfour.music.views.HeightFitSquareLayout
+            <com.maxfour.libreplayer.views.HeightFitSquareLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <fragment
                     android:id="@+id/playerAlbumCoverFragment"
-                    android:name="com.maxfour.music.fragments.player.PlayerAlbumCoverFragment"
+                    android:name="com.maxfour.libreplayer.fragments.player.PlayerAlbumCoverFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:layout="@layout/fragment_album_cover" />
-            </com.maxfour.music.views.HeightFitSquareLayout>
+            </com.maxfour.libreplayer.views.HeightFitSquareLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,7 +92,7 @@
 
                     <fragment
                         android:id="@+id/playbackControlsFragment"
-                        android:name="com.maxfour.music.fragments.player.plain.PlainPlaybackControlsFragment"
+                        android:name="com.maxfour.libreplayer.fragments.player.plain.PlainPlaybackControlsFragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_plain_controls_fragment" />

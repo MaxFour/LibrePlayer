@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:orientation="vertical"
     tools:ignore="UnusedAttribute">
 
@@ -25,12 +26,23 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                style="@style/Toolbar"
-                app:navigationIcon="@drawable/ic_keyboard_backspace_black_24dp" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Toolbar"
+                    app:navigationIcon="@drawable/ic_keyboard_backspace_black_24dp" />
+
+                <ViewStub
+                    android:id="@+id/cab_stub"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+            </FrameLayout>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/artistCoverContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
@@ -39,7 +51,7 @@
                 app:cardElevation="8dp">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/artistImage"
+                    android:id="@+id/image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -87,6 +99,7 @@
                             android:layout_height="wrap_content"
                             android:paddingTop="4dp"
                             android:textAppearance="@style/TextViewSubtitle2"
+                            android:textColor="?android:attr/textColorSecondary"
                             tools:ignore="MissingPrefix"
                             tools:text="Title" />
 

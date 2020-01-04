@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/windowBackground"
     android:clickable="true"
     android:focusable="true">
 
     <fragment
         android:id="@+id/playerAlbumCoverFragment"
-        android:name="com.maxfour.music.fragments.player.PlayerAlbumCoverFragment"
+        android:name="com.maxfour.libreplayer.fragments.player.PlayerAlbumCoverFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +22,7 @@
         android:id="@+id/masked"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?colorPrimary" />
+        android:background="?attr/colorSurface" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -47,17 +46,20 @@
     </FrameLayout>
 
 
-    <com.maxfour.music.views.VerticalTextView
+    <com.maxfour.libreplayer.views.VerticalTextView
         android:id="@+id/playerSongTotalTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+
+
         android:padding="16dp"
         android:textAppearance="@style/TextViewHeadline3"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/status_bar"
-        tools:ignore="MissingPrefix" />
+        tools:ignore="MissingPrefix"
+        tools:text="@tools:sample/date/hhmm" />
 
     <FrameLayout
         android:id="@+id/toolbarContainer"
@@ -85,14 +87,14 @@
 
         <fragment
             android:id="@+id/playbackControlsFragment"
-            android:name="com.maxfour.music.fragments.player.tiny.TinyPlaybackControlsFragment"
+            android:name="com.maxfour.libreplayer.fragments.player.tiny.TinyPlaybackControlsFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_tiny_controls_fragment" />
 
     </LinearLayout>
 
-    <com.maxfour.music.views.VerticalTextView
+    <com.maxfour.libreplayer.views.VerticalTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -112,7 +114,7 @@
         tools:ignore="MissingPrefix"
         tools:text="@tools:sample/lorem/random" />
 
-    <com.maxfour.music.views.VerticalTextView
+    <com.maxfour.libreplayer.views.VerticalTextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="0dp"

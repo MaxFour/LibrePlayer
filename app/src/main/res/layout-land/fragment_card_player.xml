@@ -8,9 +8,14 @@
     android:clickable="true"
     android:focusable="true">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface" />
+
     <fragment
         android:id="@+id/playerAlbumCoverFragment"
-        android:name="com.maxfour.music.fragments.player.PlayerAlbumCoverFragment"
+        android:name="com.maxfour.libreplayer.fragments.player.PlayerAlbumCoverFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_album_full_cover" />
@@ -62,7 +67,7 @@
 
                 <fragment
                     android:id="@+id/playbackControlsFragment"
-                    android:name="com.maxfour.music.fragments.player.card.CardPlaybackControlsFragment"
+                    android:name="com.maxfour.libreplayer.fragments.player.card.CardPlaybackControlsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:layout="@layout/fragment_card_player_playback_controls" />

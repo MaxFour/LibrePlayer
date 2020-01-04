@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.maxfour.music.views.WidthFitSquareLayout
+    <com.maxfour.libreplayer.views.WidthFitSquareLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp">
@@ -16,5 +16,5 @@
             android:scaleType="centerCrop"
             tools:ignore="ContentDescription,UnusedAttribute"
             tools:srcCompat="@tools:sample/backgrounds/scenic[6]" />
-    </com.maxfour.music.views.WidthFitSquareLayout>
+    </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 </FrameLayout>

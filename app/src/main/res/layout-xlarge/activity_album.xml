@@ -2,9 +2,9 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:transitionName="@string/transition_album_art">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -13,7 +13,6 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/backgrounds/scenic[15]" />
-
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -31,16 +30,26 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
 
-            <com.maxfour.music.views.WidthFitSquareLayout
+            <com.maxfour.libreplayer.views.WidthFitSquareLayout
                 android:id="@+id/imageContainer"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content" />
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                style="@style/Toolbar"
-                app:layout_collapseMode="pin"
-                app:title="" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Toolbar"
+                    app:navigationIcon="@drawable/ic_keyboard_backspace_black_24dp" />
+
+                <ViewStub
+                    android:id="@+id/cab_stub"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+            </FrameLayout>
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -50,6 +59,7 @@
         android:layout_gravity="fill_vertical"
         android:layout_marginStart="96dp"
         android:layout_marginEnd="96dp"
+        android:background="?attr/colorSurface"
         android:fillViewport="true"
         android:overScrollMode="never"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
@@ -73,12 +83,13 @@
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
-                    <com.maxfour.music.views.WidthFitSquareLayout
+                    <com.maxfour.libreplayer.views.WidthFitSquareLayout
                         android:layout_width="196dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/albumCoverContainer"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="8dp"
@@ -93,7 +104,7 @@
                                 android:scaleType="centerCrop"
                                 tools:srcCompat="@tools:sample/backgrounds/scenic[14]" />
                         </com.google.android.material.card.MaterialCardView>
-                    </com.maxfour.music.views.WidthFitSquareLayout>
+                    </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -115,7 +126,7 @@
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/albumText"
-                            style="@style/TextAppearance.MaterialComponents.Headline6"
+                            style="@style/TextViewHeadline6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -127,6 +138,7 @@
                             android:paddingTop="4dp"
                             android:scrollHorizontally="true"
                             android:singleLine="true"
+                            android:textColor="?android:attr/textColorSecondary"
                             tools:ignore="MissingPrefix"
                             tools:text="Album details" />
 

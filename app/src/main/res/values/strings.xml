@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="about_settings_summary">Source code and version</string>
+    <string name="about_settings_summary">Source code, share &amp; version</string>
     <string name="accent_color">Accent color</string>
     <string name="accent_color_desc">The theme accent color, defaults to green</string>
     <string name="action_about">About</string>
@@ -62,6 +62,7 @@
         <item quantity="other">albums</item>
     </plurals>
     <string name="always">Always</string>
+    <string name="app_share">Hey check out this cool music player at: https://github.com/MaxFour/Music-Player-2/releases</string>
     <string name="app_name">Music</string>
     <string name="app_shortcut_shuffle_all_short">Shuffle</string>
     <string name="app_shortcut_top_songs_short">Top songs</string>
@@ -131,7 +132,6 @@
     <string name="empty">Empty</string>
     <string name="equalizer">Equalizer</string>
     <string name="favorites">Favorites</string>
-    <string name="favorites_songs">Your  most favorites songs</string>
     <string name="finish_last_song">Finish last song</string>
     <string name="fit">Fit</string>
     <string name="flat">Flat</string>
@@ -177,8 +177,6 @@
     <string name="material">Material</string>
     <string name="md_error_label">Error</string>
     <string name="md_storage_perm_error">Permission error</string>
-    <string name="most_played_albums">Most played albums</string>
-    <string name="most_played_artists">Most played artists</string>
     <string name="my_name">Name</string>
     <string name="my_top_songs">Most played</string>
     <string name="never">Never</string>
@@ -193,14 +191,15 @@
     <string name="no_equalizer">No equalizer found</string>
     <string name="no_genres">You have no genres</string>
     <string name="no_lyrics_found">No lyrics found</string>
+    <string name="no_playing_queue">No songs playing</string>
     <string name="no_playlists">You have no playlists</string>
     <string name="no_results">No results</string>
     <string name="no_songs">You have no songs</string>
     <string name="normal">Normal</string>
     <string name="normal_lyrics">Normal lyrics</string>
-    <string name="normal_style">Normal</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> is not listed in the media store]]></string>
     <string name="nothing_to_scan">Nothing to scan</string>
+    <string name="nothing_to_see">Nothing to see</string>
     <string name="notification">Notification</string>
     <string name="notification_settings_summary">Customize the notification style</string>
     <string name="now_playing">Now playing</string>
@@ -220,7 +219,6 @@
     <string name="plain">Plain</string>
     <string name="playing_notification_description">The playing notification provides actions for play/pause etc.</string>
     <string name="playing_notification_name">Playing notification</string>
-    <string name="playlist_empty_text">Empty playlist</string>
     <string name="playlist_is_empty">Playlist is empty</string>
     <string name="playlist_name_empty">Playlist name</string>
     <string name="playlists">Playlists</string>
@@ -230,8 +228,10 @@
     <string name="pref_dialog_corner_title">Dialog corner</string>
     <string name="pref_filter_song_summary">Filter songs by length</string>
     <string name="pref_filter_song_title">Filter song duration</string>
+    <string name="pref_header_advanced">Advanced</string>
     <string name="pref_header_album">Album style</string>
     <string name="pref_header_audio">Audio</string>
+    <string name="pref_header_blacklist">Blacklist</string>
     <string name="pref_header_controls">Controls</string>
     <string name="pref_header_general">Theme</string>
     <string name="pref_header_images">Images</string>
@@ -259,12 +259,10 @@
     <string name="pref_summary_ignore_media_store_artwork">Can increase the album cover quality, but causes slower image loading times. Only enable this if you have problems with low resolution artworks</string>
     <string name="pref_summary_library_categories">Configure visibility and order of library categories</string>
     <string name="pref_summary_lock_screen">Use Music\'s custom lockscreen controls</string>
-    <string name="pref_summary_round_corners">Round the app\'s edges</string>
     <string name="pref_summary_toggle_full_screen">Immersive mode</string>
     <string name="pref_summary_toggle_headset">Start playing immediately after headphones are connected</string>
     <string name="pref_summary_toggle_shuffle">Shuffle mode will turn off when playing a new list of songs</string>
     <string name="pref_summary_toggle_volume">If enough space is available, show volume controls in the now playing screen</string>
-    <string name="pref_title_advanced">Advanced</string>
     <string name="pref_title_album_art_on_lockscreen">Show album cover</string>
     <string name="pref_title_album_cover_style">Album cover theme</string>
     <string name="pref_title_album_cover_transform">Album cover skip</string>
@@ -288,7 +286,6 @@
     <string name="pref_title_last_added_interval">Last added playlist interval</string>
     <string name="pref_title_lock_screen">Fullscreen controls</string>
     <string name="pref_title_now_playing_screen_appearance">Now playing theme</string>
-    <string name="pref_title_round_corners">Corner edges</string>
     <string name="pref_title_tab_text_mode">Tab titles mode</string>
     <string name="pref_title_toggle_carousel_effect">Carousel effect</string>
     <string name="pref_title_toggle_dominant_color">Dominant color</string>
@@ -298,8 +295,6 @@
     <string name="pref_title_toggle_volume">Volume controls</string>
     <string name="profile">Profile</string>
     <string name="queue">Queue</string>
-    <string name="recent_added_albums">Recently added albums</string>
-    <string name="recent_added_artists">Recently added artists</string>
     <string name="recent_albums">Recent albums</string>
     <string name="recent_artists">Recent artists</string>
     <string name="remove_action">Remove</string>
@@ -339,6 +334,7 @@
     <string name="selected">Selected</string>
     <string name="set_artist_image">Set artist image</string>
     <string name="set_photo">Set a profile photo</string>
+    <string name="share_app">Share app</string>
     <string name="shuffle">Shuffle</string>
     <string name="simple">Simple</string>
     <string name="sleep_timer_canceled">Sleep timer canceled</string>

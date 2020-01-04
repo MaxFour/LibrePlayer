@@ -8,6 +8,13 @@
     android:focusable="true"
     android:orientation="vertical">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <include layout="@layout/shadow_statusbar_toolbar" />
 
     <LinearLayout
@@ -22,17 +29,17 @@
             <include layout="@layout/status_bar" />
         </FrameLayout>
 
-        <com.maxfour.music.views.WidthFitSquareLayout
+        <com.maxfour.libreplayer.views.WidthFitSquareLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <fragment
                 android:id="@+id/playerAlbumCoverFragment"
-                android:name="com.maxfour.music.fragments.player.PlayerAlbumCoverFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.PlayerAlbumCoverFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_album_cover" />
-        </com.maxfour.music.views.WidthFitSquareLayout>
+        </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -41,7 +48,7 @@
 
             <fragment
                 android:id="@+id/playbackControlsFragment"
-                android:name="com.maxfour.music.fragments.player.simple.SimplePlaybackControlsFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.simple.SimplePlaybackControlsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_simple_controls_fragment" />

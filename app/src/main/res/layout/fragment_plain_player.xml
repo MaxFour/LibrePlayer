@@ -7,6 +7,11 @@
     android:clickable="true"
     android:focusable="true">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface" />
+
     <include layout="@layout/shadow_statusbar_toolbar" />
 
     <LinearLayout
@@ -50,23 +55,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:paddingTop="8dp"
                 android:maxLines="1"
-                android:textColor="?colorOnBackground"
+                android:paddingTop="8dp"
                 tools:text="Text" />
         </LinearLayout>
 
-        <com.maxfour.music.views.WidthFitSquareLayout
+        <com.maxfour.libreplayer.views.WidthFitSquareLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <fragment
                 android:id="@+id/playerAlbumCoverFragment"
-                android:name="com.maxfour.music.fragments.player.PlayerAlbumCoverFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.PlayerAlbumCoverFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_album_cover" />
-        </com.maxfour.music.views.WidthFitSquareLayout>
+        </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -75,7 +79,7 @@
 
             <fragment
                 android:id="@+id/playbackControlsFragment"
-                android:name="com.maxfour.music.fragments.player.plain.PlainPlaybackControlsFragment"
+                android:name="com.maxfour.libreplayer.fragments.player.plain.PlainPlaybackControlsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_plain_controls_fragment" />

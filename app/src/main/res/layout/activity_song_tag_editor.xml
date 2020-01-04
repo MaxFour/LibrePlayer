@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
@@ -10,6 +11,9 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp"
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -37,7 +41,8 @@
                 android:id="@+id/songTextContainer"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/songText"
@@ -45,8 +50,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/song"
                     android:inputType="text|textCapWords"
-                    android:maxLines="1"
-                    tools:text="@string/song" />
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -180,7 +184,7 @@
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/trackNumberContainer"
+                android:id="@+id/songNumberContainer"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -189,7 +193,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/trackNumberText"
+                    android:id="@+id/songNumberText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -240,8 +244,7 @@
         android:text="@string/save"
         app:cornerRadius="25dp"
         app:icon="@drawable/ic_save_white_24dp"
-        app:iconGravity="textStart"
-        tools:backgroundTint="@color/md_red_400" />
+        app:iconGravity="textStart" />
 
     <ProgressBar
         android:id="@+id/progressBar"

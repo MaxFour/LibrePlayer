@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <com.maxfour.music.views.HeightFitSquareLayout
+            <com.maxfour.libreplayer.views.HeightFitSquareLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -54,7 +54,7 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-            </com.maxfour.music.views.HeightFitSquareLayout>
+            </com.maxfour.libreplayer.views.HeightFitSquareLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
 
                     <fragment
                         android:id="@+id/playbackControlsFragment"
-                        android:name="com.maxfour.music.fragments.player.color.ColorPlaybackControlsFragment"
+                        android:name="com.maxfour.libreplayer.fragments.player.color.ColorPlaybackControlsFragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_player_playback_controls" />

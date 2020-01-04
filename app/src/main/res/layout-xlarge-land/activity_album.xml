@@ -14,7 +14,6 @@
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/backgrounds/scenic[12]" />
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -30,15 +29,27 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
 
-            <com.maxfour.music.views.WidthFitSquareLayout
+            <com.maxfour.libreplayer.views.WidthFitSquareLayout
                 android:id="@+id/imageContainer"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal" />
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                style="@style/Toolbar" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Toolbar"
+                    app:navigationIcon="@drawable/ic_keyboard_backspace_black_24dp" />
+
+                <ViewStub
+                    android:id="@+id/cab_stub"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+            </FrameLayout>
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -48,7 +59,7 @@
         android:layout_gravity="fill_vertical"
         android:layout_marginStart="128dp"
         android:layout_marginEnd="128dp"
-        android:background="@drawable/bg_bottom_sheet_dialog_fragment"
+        android:background="?attr/colorSurface"
         android:fillViewport="true"
         android:overScrollMode="never"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
@@ -71,12 +82,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.maxfour.music.views.WidthFitSquareLayout
+                    <com.maxfour.libreplayer.views.WidthFitSquareLayout
                         android:layout_width="256dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/albumCoverContainer"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="8dp"
@@ -91,7 +103,7 @@
                                 android:scaleType="centerCrop"
                                 tools:srcCompat="@tools:sample/backgrounds/scenic[13]" />
                         </com.google.android.material.card.MaterialCardView>
-                    </com.maxfour.music.views.WidthFitSquareLayout>
+                    </com.maxfour.libreplayer.views.WidthFitSquareLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -116,6 +128,7 @@
                             android:layout_height="wrap_content"
                             android:paddingTop="4dp"
                             android:textAppearance="@style/TextViewHeadline6"
+                            android:textColor="?android:attr/textColorSecondary"
                             tools:ignore="MissingPrefix"
                             tools:text="Album details" />
 

@@ -45,11 +45,13 @@
         <item>@string/dark_theme_name</item>
         <item>@string/follow_system</item>
     </string-array>
+
     <string-array name="pref_general_theme_list_values">
         <item>light</item>
         <item>dark</item>
         <item>auto</item>
     </string-array>
+
     <string-array name="pref_grid_style_list_titles">
         <item>@string/normal</item>
         <item>@string/card_style</item>
@@ -95,13 +97,11 @@
         <item>@layout/item_album_card</item>
     </array>
 
-
     <array name="pref_auto_download_images_values">
         <item>always</item>
         <item>only_wifi</item>
         <item>never</item>
     </array>
-
 
     <string-array name="pref_playlists_last_added_interval_titles">
         <item>@string/today</item>
@@ -132,6 +132,7 @@
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/8.png</item>
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/4.png</item>
     </string-array>
+
     <string-array name="evening">
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/43.png</item>
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/39.png</item>
@@ -144,6 +145,7 @@
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/11.png</item>
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/7.png</item>
     </string-array>
+
     <string-array name="after_noon">
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/42.png</item>
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/38.png</item>
@@ -157,6 +159,7 @@
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/6.png</item>
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/2.png</item>
     </string-array>
+
     <string-array name="morning">
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/41.png</item>
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/37.png</item>
@@ -171,9 +174,7 @@
         <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/1.png</item>
     </string-array>
 
-
     <array name="pref_album_details_style_layout">
         <item>@layout/activity_album</item>
     </array>
-
 </resources>
