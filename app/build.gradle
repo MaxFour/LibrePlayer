@@ -12,9 +12,9 @@ android {
         renderscriptTargetApi 28 //must match target sdk and build tools
         vectorDrawables.useSupportLibrary = true
 
-        versionCode 2
-        versionName '1.0.1'
         applicationId "com.maxfour.libreplayer"
+        versionCode 3
+        versionName '1.0.2_(Beta 1)'
 
         multiDexEnabled true
     }
